@@ -1,0 +1,7 @@
+#These commands check if the conditions to brew the potion are met. You need to throw a mundane potion into a cauldron with water in it, and throw a feather
+#and a slime ball within 1 block range of the cauldron.
+#All of these lines do basically the same thing, just for each level of cauldron. This was necessary because you cannot check if the level is just not 0
+
+execute as @e[type=item, nbt={Item: { id: "minecraft:potion", tag: { Potion:"minecraft:mundane"} }, PickupDelay: 0s } ] at @s if block ~ ~ ~ minecraft:cauldron[level=1] if entity @e[type=item, distance=..1, nbt={Item: { id: "minecraft:feather"}, PickupDelay: 0s } ] if entity @e[type=item, distance=..1, nbt={Item: { id: "minecraft:slime_ball"}, PickupDelay: 0s } ] run function cpb:brewlowg
+execute as @e[type=item, nbt={Item: { id: "minecraft:potion", tag: { Potion:"minecraft:mundane"} }, PickupDelay: 0s } ] at @s if block ~ ~ ~ minecraft:cauldron[level=2] if entity @e[type=item, distance=..1, nbt={Item: { id: "minecraft:feather"}, PickupDelay: 0s } ] if entity @e[type=item, distance=..1, nbt={Item: { id: "minecraft:slime_ball"}, PickupDelay: 0s } ] run function cpb:brewlowg
+execute as @e[type=item, nbt={Item: { id: "minecraft:potion", tag: { Potion:"minecraft:mundane"} }, PickupDelay: 0s } ] at @s if block ~ ~ ~ minecraft:cauldron[level=3] if entity @e[type=item, distance=..1, nbt={Item: { id: "minecraft:feather"}, PickupDelay: 0s } ] if entity @e[type=item, distance=..1, nbt={Item: { id: "minecraft:slime_ball"}, PickupDelay: 0s } ] run function cpb:brewlowg

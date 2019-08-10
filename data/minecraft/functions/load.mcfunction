@@ -1,0 +1,1 @@
+tellraw @a {"text":"[Custom Potion Brewing Successfully Loaded]", "color":"green"}
